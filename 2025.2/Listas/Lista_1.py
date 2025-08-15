@@ -5,34 +5,38 @@
 #Questão 1
 
 #funcao que calcula o valor de 3 viagens com base em distancia e combustivel 
-def calcular_combustivel(): 
+# def calcular_combustivel(): 
 
-    for i in range(3):
+#     for i in range(3):
 
-        x = 500, 300, 200
-        y = 10, 12, 8
+#         x = 500, 300, 200
+#         y = 10, 12, 8
 
-        print(x[i]/y[i])
+#         print(x[i]/y[i])
 
-print(calcular_combustivel())
+# print(calcular_combustivel())
 
 #Questão 2
 
-def verificar_tarefa():
+# def verificar_tarefa():
 
-    lista = ["andar", "comer", "dormir"]
-    tarefa = (input("Digite a tarefa: "))
+#     lista = ["andar", "comer", "dormir"]
+#     tarefa = (input("Digite a tarefa: "))
 
-    if tarefa in lista:
-        return "Esta na lista"
-    else:
-        return "Não esta na lista"
+#     if tarefa in lista:
+#         return "Esta na lista"
+#     else:
+#         return "Não esta na lista"
 
-print(verificar_tarefa())
+# print(verificar_tarefa())
 
 #Questão 3
 
 def adiciona_item():
 
     lista_compras = []
-    item = ...
+    item = (input("Digite o item: "))
+
+    return lista + item
+
+print(adiciona_item)
