@@ -47,17 +47,31 @@
 
 #Questão 4
 
-def contar_palavras():
+# def contar_palavras():
 
-    lista_1 = ["maçã", "banana", "maçã", "laranja", "banana", "banana"]
-    lista_2 = []    
+#     lista_1 = ["maçã", "banana", "maçã", "laranja", "banana", "banana"]
+#     lista_2 = []    
 
-    for item in lista_1:
-        if item not in lista_2:
-            lista_2.append(item)
-            print(f'{item}: {lista_1.count(item)}')
+#     for item in lista_1:
+#         if item not in lista_2:
+#             lista_2.append(item)
+#             print(f'{item}: {lista_1.count(item)}')
 
-print(contar_palavras())
+# print(contar_palavras())
 
 #Questão 5
 
+# def classficiar_idade():
+
+#     idade = int(input("Digite a idade: "))
+
+#     if idade<12:
+#         return "Criança"
+#     elif idade <=17 and idade >= 12:
+#         return "Adolescente"
+#     elif idade <=64 and idade >= 18:
+#         return "Adulto"
+#     else:
+#         return "Idoso"
+
+# print(classficiar_idade())
