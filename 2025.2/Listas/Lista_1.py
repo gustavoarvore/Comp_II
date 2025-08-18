@@ -32,11 +32,18 @@
 
 #Questão 3
 
-def adiciona_item():
+# def adiciona_item():
 
-    lista_compras = []
-    item = (input("Digite o item: "))
+#     lista = ["arroz", "feijao", "leite"]
+#     item = input("digite o item: ")
 
-    return lista + item
+#     if item in lista:
+#         print(f'{item} já tem na lista')
+#     else:
+#         lista.append(item)
+#         print(lista)
 
-print(adiciona_item)
+# print(adiciona_item())
+
+#Questão 4
+
