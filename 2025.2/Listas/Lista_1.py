@@ -50,7 +50,7 @@
 # def contar_palavras():
 
 #     lista_1 = ["maçã", "banana", "maçã", "laranja", "banana", "banana"]
-#     lista_2 = []    
+#     lista_2 = []
 
 #     for item in lista_1:
 #         if item not in lista_2:
@@ -75,3 +75,25 @@
 #         return "Idoso"
 
 # print(classficiar_idade())
+
+#Questão 6
+
+# def calcular_desconto():
+
+#     valor = float(input("Digite o valor: "))
+    
+#     if valor <= 100:
+#         desconto = valor * 0.05
+#     elif valor <= 500 and valor > 100:
+#         desconto = valor * 0.10
+#     elif valor <+ 1000 and valor >500:
+#         desconto = valor *0.15
+#     else:
+#         desconto = valor * 0.20
+
+#     valor_final = valor - desconto
+#     return f'R$ {valor_final}'
+
+# print(calcular_desconto())
+
+#Quesão 7
