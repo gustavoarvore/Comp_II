@@ -47,3 +47,16 @@
 
 #Questão 4
 
+# def contar_palavras():
+
+#     lista_1 = ["maçã", "banana", "maçã", "laranja", "banana", "banana"]
+#     lista_2 = []    
+#     for item in lista_1:
+#         if item not in lista_2:
+#             lista_2.append(item)
+#             print(f'{item}: {lista_1.count(item)}')
+
+# print(contar_palavras())
+
+#Questão 5
+
