@@ -110,3 +110,27 @@
 # print(contagem_regressiva())
 
 #Quesão 8
+
+# def classifica_estudantes():
+
+#     notas = []
+#     media = float(input("Digite a média: "))
+
+#     for i in range(5):
+#         nota = float(input(f"Digite a nota do estudante {i+1}: "))
+#         notas.append(nota)
+
+#         aprovados = []
+#         reprovados = []
+
+#     for i, nota in enumerate(notas):
+#         if nota >= media:
+#             aprovados.append(f"Estudante {i+1} aprovado com nota {nota}")
+#         else:
+#             reprovados.append(f"Estudante {i+1} reprovado com nota {nota}")
+#     return {
+#         "aprovado": len(aprovados),
+#         "reprovado": len(reprovados)
+#     }
+
+# print(classifica_estudantes())
