@@ -97,3 +97,16 @@
 # print(calcular_desconto())
 
 #Quesão 7
+
+# def contagem_regressiva():
+
+#     n = int(input("Insira um Número: "))
+
+#     while n > 0:
+#         print(n)
+#         n -= 1
+#     print("Fim da contagem!")
+
+# print(contagem_regressiva())
+
+#Quesão 8
