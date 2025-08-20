@@ -150,16 +150,16 @@
 
 #Questão 10
 
-# def verifica_senha():
+def verifica_senha():
 
-#     senha = str(input("Digite a senha: "))
+    senha = str(input("Digite a senha: "))
 
-#     if len(senha) < 7:
-#         print("Senha inválida! deve conter pelo menos 8 caracteres!")
-#     elif len(senha) >= 7:
-#         print("Senha aceita.")
+    if len(senha) < 7:
+        print("Senha inválida! deve conter pelo menos 8 caracteres!")
+    elif len(senha) >= 7:
+        print("Senha aceita.")
 
-# print(verifica_senha())
+print(verifica_senha())
 
 
 
