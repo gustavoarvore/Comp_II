@@ -150,16 +150,25 @@
 
 #Questão 10
 
-def verifica_senha():
+# def verifica_senha():
+    
+#     while True:
+        
+#         tentativa = []
+#         senha = str(input("Digite a senha: "))
 
-    senha = str(input("Digite a senha: "))
+#         for i in senha:
+#             tentativa.append(i)
+        
+#         if len(senha) < 7:
+#             print("Senha inválida! deve conter pelo menos 8 caracteres!")
+#         elif len(senha) >= 7:
+#             print("Senha aceita.")
+#         elif tentativa.count(' ') > 3:
+#             print("Tentativas excedidas!")
+#             break
 
-    if len(senha) < 7:
-        print("Senha inválida! deve conter pelo menos 8 caracteres!")
-    elif len(senha) >= 7:
-        print("Senha aceita.")
-
-print(verifica_senha())
+# print(verifica_senha())
 
 
 
