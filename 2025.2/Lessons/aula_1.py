@@ -1,3 +1,6 @@
+#Aula 1 - Relembrando Conceito de Computação I
+#Data: 14/08/2025
+
 def verificar_par_ou_impar(numero):
     if numero % 2 == 0:
         return "é par"

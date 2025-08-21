@@ -138,30 +138,34 @@
 #Questao 9
 
 # def verificar_acesso():
+#     while True:
+#         idade = int(input("Digite a idade: "))
+#         if idade >= 18:
+#             print("Acesso permitido a todas as atrações.")
+#         else:
+#             print('Acesso restrito às atrações para menores de idade.')
+#         continuar = input("Deseja verificar o acesso para mais pessoas? (s/n): ").strip().lower()
+#         if continuar != 's':
+#             break
 
-#     idade = int(input("Digite a idade: "))
-
-#     if idade >= 18:
-#         print("Acesso permitido a todas as atrações.")
-#     else:
-#         print('Acesso restrito às atrações para menores de idade.')
-
-# print(verificar_acesso())
+# print(verificar_acesso()) 
 
 #Questão 10
 
 # def verifica_senha():
+    
+#     tentativa = 0
 
-#     senha = str(input("Digite a senha: "))
+#     for i in range(3):
+                
+#         tentativa += 1
+#         senha = str(input("Digite a senha: "))
 
-#     if len(senha) < 7:
-#         print("Senha inválida! deve conter pelo menos 8 caracteres!")
-#     elif len(senha) >= 7:
-#         print("Senha aceita.")
-
+#         if len(senha) >= 8:
+#             print("Senha aceita.")
+#         elif len(senha) < 8:
+#             print("Senha inválida! deve conter pelo menos 8 caracteres!")
+#         if tentativa == 3:
+#             print("tentativas excedidas. tentar novamente mais tarde.")
+        
 # print(verifica_senha())
-
-
-
-#Questões 8 deve ser refeita com atenção
-#Questões 9 e 10 faltam conteúdo especifico para finalizar
