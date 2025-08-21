@@ -1,19 +1,21 @@
 #Aula 2 - Criando uma classe e instanciando um objeto
 #Data: 21/08/2025
 
-# class navio:
-#     def __init__(self, nome, tamanho):
-#         self.nome = nome
-#         self.tamanho = tamanho
+class navio:
+    def __init__(self, nome, tamanho):
+        self.nome = nome
+        self.tamanho = tamanho
 
-#     def navegar(self):
-#        print(f'O navio {self.nome} está navegando e tem o tamanho de {self.tamanho} metros.')
+    def navegar(self):
+       print(f'O navio {self.nome} está navegando e tem o tamanho de {self.tamanho} metros.')
 
 
-# navio1 = navio("Titanic", 200)
-# navio2 = navio("Bismarck", 250)
-# navio1.navegar()
-# navio2.navegar()
+navio1 = navio("Titanic", 200)
+navio2 = navio("Bismarck", 250)
+navio1.navegar()
+navio2.navegar()
+
+
 
 class navio:
     def __init__(self, identificador, carga_inicial, capacidade_maxima):
