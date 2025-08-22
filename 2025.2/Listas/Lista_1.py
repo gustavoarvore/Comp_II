@@ -4,7 +4,6 @@
 
 #Questão 1
 
-#funcao que calcula o valor de 3 viagens com base em distancia e combustivel 
 # def calcular_combustivel(): 
 
 #     for i in range(3):
@@ -20,13 +19,19 @@
 
 # def verificar_tarefa():
 
-#     lista = ["andar", "comer", "dormir"]
-#     tarefa = (input("Digite a tarefa: "))
+#     while True:
 
-#     if tarefa in lista:
-#         return "Esta na lista"
-#     else:
-#         return "Não esta na lista"
+#         lista = ["andar", "comer", "dormir"]
+#         tarefa = (input("Digite a tarefa: "))
+
+#         if tarefa in lista:
+#             print("Esta na lista")
+#         else:
+#             print("Não esta na lista")
+
+#         continuar = input("Deseja continar ? (s/n):").strip().lower()
+#         if continuar != 's':
+#             break
 
 # print(verificar_tarefa())
 
