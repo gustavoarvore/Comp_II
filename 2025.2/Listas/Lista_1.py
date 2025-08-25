@@ -155,7 +155,7 @@ def verificar_acesso():
 
 print(verificar_acesso()) 
 
-Questão 10
+# Questão 10
 
 def verifica_senha():
     tentativas = 0
