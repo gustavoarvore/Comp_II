@@ -1,27 +1,27 @@
 #Questão: Sistema de Temperatura
 
-# class termometro:
-#     def __init__(self, temperatura):
-#         self.temperatura = float(temperatura)
+class termometro:
+    def __init__(self, temperatura):
+        self.temperatura = float(temperatura)
 
-#     def converter_fahrenheit(self):
-#         return (self.temperatura * 9/5 + 32)
+    def converter_fahrenheit(self):
+        return (self.temperatura * 9/5 + 32)
 
-#     def converter_kelvin(self):
-#         return (self.temperatura + 273.15)
+    def converter_kelvin(self):
+        return (self.temperatura + 273.15)
 
-#     def verificar_estado(self):
-#         if self.temperatura < 0:
-#             return "Sólido"
-#         elif self.temperatura >= 0 and self.temperatura <= 100:
-#             return "Líquido"
-#         else:   
-#             return "Gasoso"
+    def verificar_estado(self):
+        if self.temperatura < 0:
+            return "Sólido"
+        elif self.temperatura >= 0 and self.temperatura <= 100:
+            return "Líquido"
+        else:   
+            return "Gasoso"
 
-# termometro1 = termometro(input("Digite a Temperatura: "))
-# print(f'A temperatura em Fahrenreit é {termometro1.converter_fahrenheit()}°F')
-# print(f'A temperatura em Kelvin é {termometro1.converter_kelvin()}°K')
-# print(f'O estado da água nessa temperatura é {termometro1.verificar_estado()}')
+termometro1 = termometro(input("Digite a Temperatura: "))
+print(f'A temperatura em Fahrenreit é {termometro1.converter_fahrenheit()}°F')
+print(f'A temperatura em Kelvin é {termometro1.converter_kelvin()}°K')
+print(f'O estado da água nessa temperatura é {termometro1.verificar_estado()}')
 
 #Questão: Estudante
 
@@ -42,7 +42,7 @@ class estudante:
             print("Reprovado")
             
     def atualizar_notas(self):
-        while True:
+        while True: 
             break
     
     def mostrar_dados():
