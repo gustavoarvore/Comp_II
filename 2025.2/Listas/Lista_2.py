@@ -92,3 +92,32 @@
 # quartohotel_2.reservar()
 # quartohotel_1.liberar()
 # quartohotel_2.liberar()
+
+#Gerenciador de Pedidos de Restaurante
+
+# class pedido:
+#     def __init__(self, cliente):
+#         self.cliente = str(cliente)
+#         self.itens = []
+#         self.total = 0.00
+
+#     def adicionar_item(self, item, preço):
+#         self.itens.append(item)
+#         self.total += preço
+
+#     def remover_item(self, item, preço):
+#         if item in self.itens:
+#             self.itens.remove(item)
+#             self.total -= preço
+
+#     def resumo(self):
+#         itens_str = ','.join(self.itens)
+#         print(f'Cliente: {self.cliente}\n Lista de Itens: {self.itens}\n Valor Total: {self.total}')
+
+# pedido1 = pedido("Gustavo")
+# pedido1.adicionar_item("banana", 6.00)
+# pedido1.adicionar_item("cebola", 2.35)
+# print(pedido1.resumo())
+
+# pedido1.remover_item('cebola',2.35)
+# print(pedido1.resumo())
