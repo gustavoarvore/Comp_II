@@ -121,3 +121,21 @@
 
 # pedido1.remover_item('cebola',2.35)
 # print(pedido1.resumo())
+
+#Locação de Carro
+
+class veiculo:
+    def __init__(modelo, ano):
+        self.modelo = str(modelo)
+        self.ano = int(ano)
+        self.disponivel = True
+        self.km_rodado = 0.0
+
+    def alugar(self):
+        if disponivel = True:
+            print(f"O carro do modelo {self.modelo}, ano {self.ano}, está Alugado")
+        else:
+            print(f'O carro do modelo {self.modelo}, ano {self.ano}, está Disponível')
+
+    def devolver(self, km):
+        
