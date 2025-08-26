@@ -64,18 +64,31 @@
 # estudante2.atualizar_notas(10,9,5)
 
 
-#Questão Reserva de Hotel
+##Questão Reserva de Hotel
 
-class quartohotel:
-    def __init__(self, numero, tipo, ocupado):
-        self.numero = int(numero)
-        self.tipo = str(tipo)
-        self.ocupado = bool(ocupado)
+# class quartohotel:
+#     def __init__(self, numero, tipo, ocupado=1):
+#         self.numero = int(numero)
+#         self.tipo = str(tipo)
+#         self.ocupado = bool(ocupado)
 
-    def reservar(self):
+#     def reservar(self):
+#         if self.ocupado == 0:
+#             print(f"Desculpe, mas o quarto de {self.tipo}, número {self.numero}, está Ocupado!")
+#         else:
+#             print(f"O quarto de {self.tipo}, número {self.numero}, está disponível")
 
-    def liberar(self):
+#     def liberar(self):
+#         if self.reservar() == 0:
+#             print(f"O quarto de {self.tipo}, número {self.numero}, estará disponível em breve!")
+#         else:
+#             print(f'O quarto de {self.tipo}, número {self.numero}, já disponível!')
 
-    def status(self):
+#     # def status(self):
 
-quartohotel_1 = quartohotel
+# quartohotel_1 = quartohotel(45, "Solteiro", 0)
+# quartohotel_2 = quartohotel(76, "Casal", 1)
+# quartohotel_1.reservar()
+# quartohotel_2.reservar()
+# quartohotel_1.liberar()
+# quartohotel_2.liberar()
