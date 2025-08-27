@@ -125,17 +125,49 @@
 #Locação de Carro
 
 class veiculo:
-    def __init__(modelo, ano):
-        self.modelo = str(modelo)
-        self.ano = int(ano)
+    def __init__(self, modelo:str, ano:int):
+        self.modelo = modelo
+        self.ano = ano
         self.disponivel = True
         self.km_rodado = 0.0
 
     def alugar(self):
-        if disponivel = True:
-            print(f"O carro do modelo {self.modelo}, ano {self.ano}, está Alugado")
+        if self.disponivel:
+            self.disponivel = False
+            print(f"O carro de modelo {self.modelo} está Alugado!")
         else:
-            print(f'O carro do modelo {self.modelo}, ano {self.ano}, está Disponível')
+            print(f"O carro de modelo {self.modelo} está Disponível!")
 
-    def devolver(self, km):
+    def devolver(self, km:float):
+        if not self.alugar:
+            self.alugar = True
+            self.km_rodado += km
+            print(f"O carro do modelo {self.modelo} está com {km} Km rodados")
+        else:
+            None
+
+    def realizar_manutencao(self):
+        self.km_rodado = 0.0
+        print(f"Manutenção do veículo {self.modelo} completa! Quilometragem atual: {self.km_rodado}")
+
+    def verificar_status(self):
+        status = "Disponível" if self.disponivel else "alugado"
+        print(f'O veículo do modelo {self.modelo} e ano {self.ano} está {status} e sua quilometragem é {self.km_rodado}')
+
+    def necessita_manutencao(self):
+        if self.km_rodado >= 10000.0:
+            return True
+        else: 
+            return False
+
+veiculo1 = veiculo("Palio 207", 2010)
+print(veiculo1.verificar_status())
+veiculo1.alugar()
+veiculo1.devolver(12000.0)
+print(veiculo1.verificar_status())
+print(veiculo1.necessita_manutencao())
+veiculo1.realizar_manutencao()
+print(veiculo1.verificar_status())
+
+
         
