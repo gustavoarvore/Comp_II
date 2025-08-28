@@ -124,50 +124,106 @@
 
 #Locação de Carro
 
-class veiculo:
-    def __init__(self, modelo:str, ano:int):
-        self.modelo = modelo
-        self.ano = ano
-        self.disponivel = True
-        self.km_rodado = 0.0
+# class veiculo:
+#     def __init__(self, modelo:str, ano:int):
+#         self.modelo = modelo
+#         self.ano = ano
+#         self.disponivel = True
+#         self.km_rodado = 0.0
 
-    def alugar(self):
-        if self.disponivel:
-            self.disponivel = False
-            print(f"O carro de modelo {self.modelo} está Alugado!")
-        else:
-            print(f"O carro de modelo {self.modelo} está Disponível!")
+#     def alugar(self):
+#         if self.disponivel:
+#             self.disponivel = False
+#             print(f"O carro de modelo {self.modelo} está Alugado!")
+#         else:
+#             print(f"O carro de modelo {self.modelo} está Disponível!")
 
-    def devolver(self, km:float):
-        if not self.alugar:
-            self.alugar = True
-            self.km_rodado += km
-            print(f"O carro do modelo {self.modelo} está com {km} Km rodados")
-        else:
-            None
+#     def devolver(self, km:float):
+#         if not self.alugar:
+#             self.alugar = True
+#             self.km_rodado += km
+#             print(f"O carro do modelo {self.modelo} está com {km} Km rodados")
+#         else:
+#             None
 
-    def realizar_manutencao(self):
-        self.km_rodado = 0.0
-        print(f"Manutenção do veículo {self.modelo} completa! Quilometragem atual: {self.km_rodado}")
+#     def realizar_manutencao(self):
+#         self.km_rodado = 0.0
+#         print(f"Manutenção do veículo {self.modelo} completa! Quilometragem atual: {self.km_rodado}")
 
-    def verificar_status(self):
-        status = "Disponível" if self.disponivel else "alugado"
-        print(f'O veículo do modelo {self.modelo} e ano {self.ano} está {status} e sua quilometragem é {self.km_rodado}')
+#     def verificar_status(self):
+#         status = "Disponível" if self.disponivel else "alugado"
+#         print(f'O veículo do modelo {self.modelo} e ano {self.ano} está {status} e sua quilometragem é {self.km_rodado}')
 
-    def necessita_manutencao(self):
-        if self.km_rodado >= 10000.0:
-            return True
-        else: 
-            return False
+#     def necessita_manutencao(self):
+#         if self.km_rodado >= 10000.0:
+#             return True
+#         else: 
+#             return False
 
-veiculo1 = veiculo("Palio 207", 2010)
-print(veiculo1.verificar_status())
-veiculo1.alugar()
-veiculo1.devolver(11000.0)
-print(veiculo1.verificar_status())
-print(veiculo1.necessita_manutencao())
-veiculo1.realizar_manutencao()
-print(veiculo1.verificar_status())
+# veiculo1 = veiculo("Palio 207", 2010)
+# print(veiculo1.verificar_status())
+# veiculo1.alugar()
+# veiculo1.devolver(11000.0)
+# print(veiculo1.verificar_status())
+# print(veiculo1.necessita_manutencao())
+# veiculo1.realizar_manutencao()
+# print(veiculo1.verificar_status())
 
+#Questão Sistema de Tanque de Armazenamento
 
+# class sistemas:
+#     def __init__(self, capac_max:float):
+#         self.capac_max = capac_max
+#         self.nvl_atual = 0.0
+#         self.aberto = False
+
+#     def abrir_valvula(self):
+#         if self.aberto:
+#             self.aberto = True
+#             print("Válvula do tanque aberta")
+#         else:
+#             None
+
+#     def fechar_valvula(self):
+#         if not self.aberto:
+#             self.aberto == False
+#             print("Válvula do tanque fechada")
+#         else:
+#             None
+
+#     def adicionar_liquido(self, quantidade:float):
+#         self.nvl_atual += quantidade
+#         print(f"O nível atual do tanque é {self.nvl_atual}")
+
+#     def retirar_liquido(self, quantidade:float):
+#         if self.aberto == True:
+#             quantidade -= self.capac_max
+#             print(f"Foram retirados do tanque: {quantidade}")
+#         else:
+#             None
+
+#     def verificar_status(self):
+#         print(f"Quantidade atual: {self.nvl_atual}L\nVálvula está {self.aberto}")
+
+#     def esta_cheio(self):
+#         if self.nvl_atual == self.capac_max:
+#             True
+#         else:
+#             False
         
+#     def esta_vazio(self):
+#         if self.nvl_atual == 0.0:
+#             True
+#         else:
+#             False
+
+# sistemas1 = sistemas(500.0)
+# sistemas1.abrir_valvula()
+# sistemas1.fechar_valvula()
+# print(sistemas1.verificar_status())
+# sistemas1.adicionar_liquido(150.0)
+# sistemas1.retirar_liquido(25.0)
+# print(sistemas1.verificar_status())
+# sistemas1.esta_cheio()
+# sistemas1.esta_vazio()
+# print(sistemas1.verificar_status())
