@@ -163,7 +163,7 @@ class veiculo:
 veiculo1 = veiculo("Palio 207", 2010)
 print(veiculo1.verificar_status())
 veiculo1.alugar()
-veiculo1.devolver(12000.0)
+veiculo1.devolver(11000.0)
 print(veiculo1.verificar_status())
 print(veiculo1.necessita_manutencao())
 veiculo1.realizar_manutencao()
