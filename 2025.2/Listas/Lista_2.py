@@ -67,31 +67,39 @@ estudante2.atualizar_notas(10,9,5)
 #Questão Reserva de Hotel
 
 class quartohotel:
-    def __init__(self, numero, tipo, ocupado=1):
-        self.numero = int(numero)
-        self.tipo = str(tipo)
-        self.ocupado = bool(ocupado)
+    def __init__(self, numero:int, tipo:str):
+        self.numero = numero
+        self.tipo = tipo
+        self.ocupado = False
+        
 
     def reservar(self):
-        if self.ocupado == 0:
+        if self.ocupado:
+            self.ocupado = True
             print(f"Desculpe, mas o quarto de {self.tipo}, número {self.numero}, está Ocupado!")
         else:
             print(f"O quarto de {self.tipo}, número {self.numero}, está disponível")
 
     def liberar(self):
-        if self.reservar() == 0:
+        if self.ocupado:
+            self.ocupado = False
             print(f"O quarto de {self.tipo}, número {self.numero}, estará disponível em breve!")
         else:
             print(f'O quarto de {self.tipo}, número {self.numero}, já disponível!')
 
     def status(self):
+        status = "Ocupado" if self.ocupado else "Disponível"
+        print(f'O quarto de {self.tipo}, número {self.numero}, está {status}\n')
 
-quartohotel_1 = quartohotel(45, "Solteiro", 0)
-quartohotel_2 = quartohotel(76, "Casal", 1)
+quartohotel_1 = quartohotel(45, "Solteiro")
 quartohotel_1.reservar()
-quartohotel_2.reservar()
 quartohotel_1.liberar()
+quartohotel_1.status()
+
+quartohotel_2 = quartohotel(76, "Casal")
+quartohotel_2.reservar()
 quartohotel_2.liberar()
+quartohotel_2.status()
 
 #Questão Gerenciador de Pedidos de Restaurante
 
@@ -124,10 +132,10 @@ print(pedido1.resumo())
 #Questão Locação de Carro
 
 class veiculo:
-    def __init__(self, modelo:str, ano:int, disponivel=True):
+    def __init__(self, modelo:str, ano:int):
         self.modelo = modelo
         self.ano = ano
-        self.disponivel = disponivel
+        self.disponivel = True
         self.km_rodado = 0.0
 
     def alugar(self):
@@ -138,35 +146,41 @@ class veiculo:
             print(f"O carro de modelo {self.modelo} está Disponível!")
 
     def devolver(self, km:float):
-        if not self.alugar:
-            self.alugar = True
+        if self.disponivel == False:
             self.km_rodado += km
-            print(f"O carro do modelo {self.modelo} está com {km} Km rodados")
+            print(f"O {self.modelo} está com {self.km_rodado}Km rodados")
         else:
-            None
+            pass
 
     def realizar_manutencao(self):
-        self.km_rodado = 0.0
-        print(f"Manutenção do veículo {self.modelo} completa! Quilometragem atual: {self.km_rodado}")
+        if self.km_rodado >= 10000:
+          print(f"Manutenção do veículo {self.modelo} completa! Quilometragem Zerada!")
+        else:
+          pass
 
     def verificar_status(self):
         status = "Disponível" if self.disponivel else "alugado"
-        print(f'O veículo do modelo {self.modelo} e ano {self.ano} está {status} e sua quilometragem é {self.km_rodado}')
+        print(f'O veículo do modelo {self.modelo} e ano {self.ano} está {status} e sua quilometragem é {self.km_rodado}\n')
 
     def necessita_manutencao(self):
-        if self.km_rodado >= 10000.0:
-            return True
-        else: 
-            return False
+      if self.km_rodado >= 10000.0:
+        print("Necessário Realizar a Manutenção!")
+      else: 
+        print("Não é Necessário Realizar a Manutenção!")
 
 veiculo1 = veiculo("Palio 207", 2010)
-print(veiculo1.verificar_status())
 veiculo1.alugar()
-veiculo1.devolver(11000.0)
-print(veiculo1.verificar_status())
-print(veiculo1.necessita_manutencao())
+veiculo1.devolver(5000.0)
+veiculo1.necessita_manutencao()
 veiculo1.realizar_manutencao()
-print(veiculo1.verificar_status())
+veiculo1.verificar_status()
+
+veiculo2 = veiculo("Mercedes Bens", 2017)
+veiculo2.alugar()
+veiculo2.devolver(21000.0)
+veiculo2.necessita_manutencao()
+veiculo2.realizar_manutencao()
+veiculo2.verificar_status()
 
 #Questão Sistema de Tanque de Armazenamento
 
@@ -174,54 +188,52 @@ class sistemas:
     def __init__(self, capac_max:float):
         self.capac_max = capac_max
         self.nvl_atual = 0.0
-        self.aberto = False
+        self.aberto = True
 
     def abrir_valvula(self):
         if self.aberto:
-            self.aberto = True
-            print("Válvula do tanque aberta")
+          self.aberto = True
+          print("Válvula do tanque aberta")
         else:
-            None
+          pass
 
     def fechar_valvula(self):
-        if not self.aberto:
-            self.aberto == False
-            print("Válvula do tanque fechada")
-        else:
-            None
+      if not self.aberto:
+        self.aberto = False
+        print("Válvula do tanque fechada")
+      else:
+        pass
 
     def adicionar_liquido(self, quantidade:float):
         self.nvl_atual += quantidade
         print(f"O nível atual do tanque é {self.nvl_atual}")
 
     def retirar_liquido(self, quantidade:float):
-        if self.aberto == True:
-            quantidade -= self.capac_max
-            print(f"Foram retirados do tanque: {quantidade}")
-        else:
-            None
+        self.nvl_atual -= quantidade
+        print(f"Foram retirados do tanque: {quantidade}")
 
     def verificar_status(self):
-        print(f"Quantidade atual: {self.nvl_atual}L\nVálvula está {self.aberto}")
+      print(f"Quantidade atual: {self.nvl_atual}L")
 
     def esta_cheio(self):
         if self.nvl_atual == self.capac_max:
             True
+            print("Tanque Cheio")
         else:
             False
         
     def esta_vazio(self):
         if self.nvl_atual == 0.0:
             True
+            print("Tanque Vazio")
         else:
             False
 
 sistemas1 = sistemas(500.0)
 sistemas1.abrir_valvula()
 sistemas1.fechar_valvula()
-print(sistemas1.verificar_status())
-sistemas1.adicionar_liquido(150.0)
-sistemas1.retirar_liquido(25.0)
+sistemas1.adicionar_liquido(500.0)
+sistemas1.retirar_liquido(450.0)
 print(sistemas1.verificar_status())
 sistemas1.esta_cheio()
 sistemas1.esta_vazio()
