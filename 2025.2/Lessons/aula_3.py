@@ -48,3 +48,50 @@ print(audiobook1.detalhes_audiobook())
 print(audiobook1.tempo_estimado_leitura(1.0))
 print(audiobook1.tempo_estimado_leitura(1.5))
 print(audiobook1.tempo_estimado_leitura(2.0))
+
+# ---------------------------------------------------------------------------------------------
+
+class animal:
+    def emitir_som(self):
+        pass
+    
+class cachorro(animal):
+    def emitir_som(self):
+        return "au au"
+    
+class gato(animal):
+    def emitir_som(self):
+        return "miau"
+    
+cachorro1 = cachorro()
+print(cachorro1.emitir_som())
+
+gato1 = gato()
+print(gato1.emitir_som())
+
+# # ---------------------------------------------------------------------------------------------
+
+class forma:
+    def calcular_area(self):
+        pass
+    
+class retangulo(forma):
+    def __init__(self, largura, altura):
+        self.largura = largura
+        self.altura = altura
+    
+    def calcular_area(self):
+        return self.largura * self.altura
+
+class circulo(forma):
+    def __init__(self, raio):
+        self.raio = raio
+        
+    def calcular_area(self):
+        return 3.14*self.raio**2
+    
+retangulo1 = retangulo(2, 2)
+print(retangulo1.calcular_area())
+
+circulo1 = circulo(7)
+print(circulo1.calcular_area())
