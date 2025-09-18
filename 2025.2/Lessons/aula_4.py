@@ -6,7 +6,7 @@ class tratamentotermico:
         self.temperatura = temperatura
     
     def tratar(self):
-        return f'Executando tratamento térmico a {self.temperatura} graus Celsius'
+        return f'\nExecutando tratamento térmico a {self.temperatura} graus Celsius'
 
 class controlequalidade:
     # classe base II
@@ -15,8 +15,7 @@ class controlequalidade:
         self.frequencia = frequencia
 
     def controlar(self):
-        return f'Controle de qualidade usando o método {self.metodo}'
-               f'{self.frequencia} vezes por dia ela é executada.'
+        return f'Controle de qualidade usando o método {self.metodo} foi executado {self.frequencia} vezes por dia.'
 
 class processometalurgico(tratamentotermico, controlequalidade):
     def __init__(self, temperatura:float, metodo:str, frequencia:int):
@@ -24,8 +23,8 @@ class processometalurgico(tratamentotermico, controlequalidade):
         controlequalidade.__init__(self, metodo, frequencia)
 
 processo1 = processometalurgico(850, "Ultrassonografia", 3)
-processo1.tratar()
-processo1.controlar()
+print(processo1.tratar())
+print(processo1.controlar())
 
 # --------------------------------------------------------------------------------
 
@@ -35,7 +34,7 @@ class numero:
         self.__num = num
 
     def __add__(self, other):
-        print(f'Retorna {self.__num} + {other.__num}')
+        print(f'\nRetorna {self.__num} + {other.__num}')
         return self.__num + other.__num
 
 num_1 = numero(4.5)
