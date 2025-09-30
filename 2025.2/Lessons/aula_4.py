@@ -1,3 +1,51 @@
+# Classe Abstrata
+
+# Exemplo 1
+from abc import ABC, abstractmethod
+
+class animal(ABC):
+    @abstractmethod
+    def emitir_som(self) -> str:
+        pass
+    
+    def comer(self, alimento:str) -> str:
+        return f'O animal está comendo {alimento}'
+    
+class cachorro(animal):
+    def emitir_som(self) -> str:
+        return 'au au'
+
+class gato(animal):
+    def emitir_som(self) -> str:
+        return 'miau'
+
+cachorro1 = cachorro()
+print(cachorro1.comer('ração'))
+print(cachorro1.emitir_som())
+
+gato1 = gato()
+print(gato1.comer('lasanha'))
+print(gato1.emitir_som())
+
+# Exemplo 2
+
+# from abc import ABC, abstractmethod
+
+class embarcacao(ABC):
+    @abstractmethod
+    def clacular_area_flutuacao(self):
+        pass
+    
+class navio(embarcacao):
+    def clacular_area_flutuacao(self):
+        return 'Área de flutuacao calculada para um navio'
+
+class submarino(embarcacao):
+    def clacular_area_flutuacao(self):
+        return 'Área de flutuacao calculada para um submarino'
+
+# --------------------------------------------------------------------------------
+
 #Herança Múltipla
 
 class tratamentotermico:
@@ -27,6 +75,8 @@ print(processo1.tratar())
 print(processo1.controlar())
 
 # --------------------------------------------------------------------------------
+
+# Métodos Mágicos
 
 class numero:
     # classe que representa um numero float
