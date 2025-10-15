@@ -73,3 +73,5 @@ print(dividir(10, 2))
 print(dividir(5, 0))
 print(dividir(10, 2))
 
+# exercicio 2
+
