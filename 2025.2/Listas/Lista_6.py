@@ -29,10 +29,11 @@ arq = open('texto.txt', 'w')
 arq.write('Seu Zé: sim, fui...fui eu quem comeu o bolo - disse Zé com um tom de superioridade \nJoana: Ah não, Zé - com os olhos lacrimejando - eu guardei pra mim da festa da Tia Lucia \nQuando derrepente \nPOW!!! \nSurge Dona Eldineia com um dos pés sem o chinelo Havaiana \nDona Eldineia: POIS VOCÊ TRATE DE COMPRAR UM BOLO PRA ELA AGORA! - aos berros \nSeu Zé sentiu um frio nas costas e saiu correndo até a padaria da esquina.')
 arq = open('texto.txt', 'r')
 conteudo = arq.read()
+linhas = conteudo.splitlines()
 palavras = conteudo.split()
 
 num_linhas = len(linhas)
-num_palavras = sum(len(conteudo.split()) for linha in arq)
+num_palavras = len(palavras)
 num_caracteres = len(conteudo)
 
 print(f'numero total de linhas: {num_linhas}')
@@ -44,13 +45,36 @@ arq.close()
 # Questão 4
 
 try:
-    arq = open('', 'w')
-    arq.write('seila')
-    arq = open('', 'r')
+    arq = open('numeros.txt', 'r')
+    soma = 0
     for linha in arq:
-        print(linha)
+        soma += int(linha)
+    print(f'A soma total dos números é: {soma}')
     arq.close()
 except FileNotFoundError:
     print('Erro: Arquivo não encontrado')
 except ValueError:
     print('Erro: Linha não pode ser convertida para número')
+
+
+# Questão 5
+
+class Produto:
+    def __init__(self, nome):
+        self.nome = nome
+    
+    def salvar(self):
+        with open('produtos.txt', 'a') as arq:
+            arq.write(self.nome + '\n')
+    
+    def carregar_todos(self):
+        produtos = []
+        try:
+            with open('produtos.txt', 'r') as arq:
+                for linha in arq:
+                    nome = linha.strip()
+                    produtos.append(Produto(nome))
+            return produtos
+        except FileNotFoundError:
+            return []
+
